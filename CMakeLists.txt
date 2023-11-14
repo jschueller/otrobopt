@@ -7,7 +7,7 @@ option (BUILD_SHARED_LIBS            "Build shared libraries"                   
 # By default, build in Release mode. Must appear before project() command
 set( CMAKE_BUILD_TYPE Release CACHE STRING "Build type")
 
-project (OTRobOpt)
+project (otrobopt)
 
 string (TOLOWER ${CMAKE_PROJECT_NAME} PACKAGE_NAME)
 
@@ -52,7 +52,7 @@ set (OTROBOPT_INCLUDE_PATH include)
 set (OTROBOPT_SWIG_INCLUDE_DIRS ${OTROBOPT_INCLUDE_PATH}/${PACKAGE_NAME}/swig)
 set (OTROBOPT_DATA_PATH share)
 set (OTROBOPT_CONFIG_CMAKE_PATH ${CMAKE_INSTALL_LIBDIR}/cmake/otrobopt)
-set (OTROBOPT_DOC_PATH share/${PACKAGE_NAME}/doc)
+set (OTROBOPT_DOC_PATH ${CMAKE_INSTALL_DOCDIR})
 
 set (CMAKE_CXX_STANDARD 11)
 
